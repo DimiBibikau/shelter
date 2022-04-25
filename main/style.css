@@ -1,1 +1,57 @@
-dud
+// some stuff about the whole doc
+
+//particular classes
+
+.wrapper {
+    margin-right: auto; 
+    margin-left:  auto;
+    margin-top: 0;
+
+    max-width: 1200px;
+
+    padding-right: 40px;
+    padding-left: 40px;
+
+    display: block;
+}
+
+.start-screen {
+    height: 908px;
+    width: 1280px;
+    background-image: url('/assets/images/start-screen.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+
+.puppy {
+    height: 728px;
+    width: 698px;
+    right: 0;
+}
+
+.about {
+    height: 588px;
+    width: 1280px;
+    left: 0px;
+    top: 908px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;  
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 1200px;
+    height: 408px;
+}
+
+.about-pic {
+    width: 300px;
+}
+.about-text {
+    width: 380px;
+}
