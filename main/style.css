@@ -1,6 +1,16 @@
-// some stuff about the whole doc
+/*GENERAL STUFF*/
 a {
     text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+a:visited {
+    color: #CDCDCD;
 }
 
 ul, ol {
@@ -8,6 +18,7 @@ ul, ol {
     padding: 0;
 }
 
+/* HEADINGS */
 .h1 {
     font-family: Georgia;
     font-size: 32px;
@@ -17,10 +28,11 @@ ul, ol {
     text-align: left;
     color: #F1CDB3;  
     margin: 0;
+    padding: 0;
 }
 
 .main-white {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 .h2 {
@@ -31,6 +43,8 @@ ul, ol {
     letter-spacing: 0em;
     text-align: left;
     color: #545454;
+    margin: 0;
+    padding: 0;
 }
 
 .h3 {
@@ -39,10 +53,37 @@ ul, ol {
     font-weight: 400;
     line-height: 45px;
     letter-spacing: 0.06em;
-    text-align: left;
     color: #545454;
+    margin: 0;
+    padding: 0;
 }
 
+.h4 {
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #545454;
+    margin: 0;
+    padding: 0;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.about {
+    text-align: left;
+}
+/* HEADINGS */
+
+/*TEXTS AND FONTS*/
 .large-text {
     font-family: Arial;
     font-size: 15px;
@@ -50,7 +91,12 @@ ul, ol {
     line-height: 24px;
     letter-spacing: 0px;
     text-align: left;
-    color: #CDCDCD;
+    color: #545454;
+}
+
+.short-bio-text {
+    color: #CDCDCD !important; 
+
 }
 
 .small-text {
@@ -67,30 +113,12 @@ ul, ol {
 .black-text {
     color: black;
 }
-//particular classes
-
-.wrapper {
-    margin-right: auto; 
-    margin-left:  auto;
-    margin-top: 0;
-
-    max-width: 1200px;
-
-    padding-right: 40px;
-    padding-left: 40px;
-
-    display: block;
+.color-primary {
+    color:#F1CDB3;
 }
+/*TEXTS AND FONTS*/
 
-.start-screen {
-    height: 908px;
-    width: 1280px;
-    background-image: url('/assets/images/start-screen.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-}
-
+/*BUTTONS*/
 .button-primary {
     height: 52px;
     width: 207px;
@@ -99,6 +127,15 @@ ul, ol {
     border-radius: 100px;
     padding: 15px, 45px, 15px, 45px;
     background-color: #F1CDB3;
+    border: none;
+    
+    color: #292929;
+    font-family: Georgia;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+   
 }
 
 .button-secondary {
@@ -109,6 +146,13 @@ ul, ol {
     border-radius: 100px;
     padding: 15px, 45px, 15px, 45px;   
     border: 3px solid #F1CDB3;
+    background-color: #FFFFFF;
+    color: #292929;
+    font-family: Georgia;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.06em;
 }
 
 .button-long {
@@ -125,21 +169,75 @@ ul, ol {
     border: 3px solid #F1CDB3;
 }
 
+.button-donation {
+    height: 43px;
+    width: 349px;
+    border-radius: 9px;
+    padding: 10px, 15px, 10px, 15px;
+    background-color: #F1CDB3;  
+    display: flex;
+    flex-direction: row; 
+    align-content: center;
+    justify-content: space-between;
+    border: none;
+}
+
+.button-donation-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 15px;
+}
+/*BUTTONS*/
+
+/*DOCUMENT*/
+.wrapper {
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1200px;
+}
+
+.start-screen {
+    max-width: 1280px;
+    background-image: url('/assets/images/start-screen.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    padding: 60px 40px 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    justify-content: space-between;
+}
 .header-navigation {
     display: flex;
     flex-direction: row; 
+    justify-content: space-between;
+    list-style: none !important;
 }
 
 .navigation {
     display: flex;
     flex-direction: row;
-    list-style: none !important;
+    justify-content: space-between;
+    width: 443px;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left; 
+    color:#FFFFFF;
 }
 
 .nav-link {
     padding: 0 20px;
     line-height: 50px;
-    transition: .3s;
+    transition: .3s;  
 }
 
 .short-intro {
@@ -150,6 +248,10 @@ ul, ol {
 .short-intro-text {
     display: flex;
     flex-direction: column;
+    margin-top: 163px;
+    width: 460px;
+    height: 322px;
+    justify-content: space-between;
 }
 
 .puppy {
@@ -173,6 +275,8 @@ ul, ol {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+    padding-top: 80px;
     width: 1200px;
     height: 408px;
 }
@@ -186,14 +290,13 @@ ul, ol {
 
 .pets-page {
     max-width: 1280px;
-    max-height: 877px;
+    height: 877px;
     background-color: #F6F6F6;;
 }
 
-.pets-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.section-header {
+    padding-top: 80px;
+    padding-bottom: 60px;
 }
 
 .pets-characters {
@@ -201,6 +304,8 @@ ul, ol {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
+    padding-bottom: 60px;
 }
 
 .pet-item {
@@ -210,4 +315,108 @@ ul, ol {
     width: 270px;
     height: 435px;
     align-items: center;
+}
+
+.pets-button {
+    text-align: center;
+}
+
+.help {
+    height: 611px;
+}
+
+.help-logo {
+    height: 60px;
+}
+
+.ways-to-help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1026px;
+    margin-bottom: 55px;
+}
+
+.second-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 858px;
+    margin-bottom: 100px;
+}
+
+.help-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.donation {
+    height: 462px;
+    background-color:  #F6F6F6;
+    display: flex;
+    align-items: center;
+}
+
+.donation-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 915px;
+    margin: 0 auto;
+}
+
+.donation-details {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 380px;
+    height: 282px;
+    justify-content: space-between;
+}
+
+.footer {
+    max-height: 350px;
+    background-image: url("/assets/images/Footer.png");
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.left-column {
+    width: 290px;
+    padding-top: 56px;
+}
+
+.right-column {
+    width: 302px;
+    padding-top: 56px;
+}
+
+.footer-puppy {
+    padding-top: 40px;
+}
+
+.contacts-item {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    color: #F1CDB3;
+    padding-bottom: 40px;
+}
+
+.contacts-title {
+    padding-bottom: 40px;
+}
+.contacts-logo {
+    height: 32px;
+    padding-right: 20px;
 }
