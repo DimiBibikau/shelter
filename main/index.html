@@ -1,46 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Animal shelter</title>
+        <title>Do shelter</title>
         <meta name="viewport" content="width=device-wdth, initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="icon" href="assets/icons/...">
+        <link rel="stylesheet" href="/assets/styles/normalize.css">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <!-and some more links connecting relevant fonts->
     </head>
     <body>
         <div class="wrapper">       
-            <div class="main">
+            <main class="main">
                 <div class="start-screen">
-                    <div class="block-nav">
+                    <div class="header">
+                        <div class="logo">
+                            <h1 class="h1">Cozy House</h1c>
+                            <p class="large-text">Shelter for pets in Boston</p>
+                        </div>
+                        <nav class="header-navigation">
+                            <ul class="navigation">
+                                <li class="nav-item"><a href="#about">About the shelter</a></li></li>
+                                <li class="nav-item"><a href="#pets">Our pets</a></li>
+                                <li class="nav-item"><a href="#help">Help the shelter</a></li>
+                                <li class="nav-item"><a href="#contacts">Contacts</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="puppy">
-                        <img src="/assets/images/start-screen-puppy.png" alt="start-screen-puppy">
-                    </div>
+                    <section class="short-intro">
+                        <div class="short-intro-text">
+                            <h2 class="h2 main-white">Not only people need a house</h2>
+                            <p class="large-text">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!
+                            </p>
+                            <button type="button" class="button-primary">Make a friend</button>
+
+                        </div>
+                        <div class="puppy">
+                            <img src="/assets/images/start-screen-puppy.png" alt="start-screen-puppy">
+                        </div>
+                    </section>
                 </div>
-                <div class="about">
+                <div class="about-the-shelter">
                     <div class="about-content">
                         <div class="about-pic">
                             <img src="/assets/images/about-pets.png">
                         </div>
                         <div class="about-text">
-                            <h2>About the shelter “Cozy House”</h2>
-                            <p>Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.
+                            <h3 class="h3" id="about">About the shelter “Cozy House”</h3>
+                            <p class="large-text black-text">Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find a family. The others will continue to live with us and will be waiting for a lucky chance to become dearly loved.
                             </p>
-                            <p>We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.
+                            <p class="large-text black-text">We feed our wards with the best food and make sure that they do not get sick, feel comfortable (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they become attached to the pets and would hardly ever leave them alone.
                             </p>      
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="pets-page" id="pets">
+                    <div class="pets-contents">
+                        <h3 class="h3">Our friends who are looking for a house</h3>
+                        <div class="pets-characters">
+                            <button type="button" class="button-round"></button>
+                            <article class="pet-item">
+                                <img src="/assets/images/pets-katrine.png" alt="out animal pic">
+                                <h2>Katrine</h2>
+                                <button type="button" class="button-secondary">Learn more</button>
+                            </article>
+                            <article class="pet-item">
+                                <img src="/assets/images/pets-jennifer.png" alt="out animal pic">
+                                <h2>Jennifer</h2>
+                                <button type="button" class="button-secondary">Learn more</button>
+                            </article>
+                            <article class="pet-item">
+                                <img src="/assets/images/pets-woody.png" alt="out animal pic">
+                                <h2>Woody</h2>
+                                <button type="button" class="button-secondary">Learn more</button>
+                            </article>
+                            <button type="button" class="button-round"></button>
+                        </div>
+                        <button type="button" class="button-primary button-long">Get to know the rest</button>
+                    </div>
+                </div>
+            </>
             <footer>
 
             </footer>
 
         </div>
-
-        
         <script src="./script.js"></script>
     </body>
 </html>

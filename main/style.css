@@ -1,5 +1,72 @@
 // some stuff about the whole doc
+a {
+    text-decoration: none;
+}
 
+ul, ol {
+    list-style: none;
+    padding: 0;
+}
+
+.h1 {
+    font-family: Georgia;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #F1CDB3;  
+    margin: 0;
+}
+
+.main-white {
+    color: #FFFFFF;
+}
+
+.h2 {
+    font-family: Georgia;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 57px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #545454;
+}
+
+.h3 {
+    font-family: Georgia;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    color: #545454;
+}
+
+.large-text {
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #CDCDCD;
+}
+
+.small-text {
+    font-family: Arial;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #B2B2B2;
+}
+
+.black-text {
+    color: black;
+}
 //particular classes
 
 .wrapper {
@@ -24,13 +91,74 @@
     background-position: center; 
 }
 
+.button-primary {
+    height: 52px;
+    width: 207px;
+    left: 0px;
+    top: 270px;
+    border-radius: 100px;
+    padding: 15px, 45px, 15px, 45px;
+    background-color: #F1CDB3;
+}
+
+.button-secondary {
+    height: 52px;
+    width: 187px;
+    left: 470px;
+    top: 645px;
+    border-radius: 100px;
+    padding: 15px, 45px, 15px, 45px;   
+    border: 3px solid #F1CDB3;
+}
+
+.button-long {
+    width: 261px;
+}
+
+.button-round {
+    height: 52px;
+    width: 52px;
+    left: 0px;
+    top: 192px;
+    border-radius: 100px;
+    padding: 23px, 19px, 23px, 19px;    
+    border: 3px solid #F1CDB3;
+}
+
+.header-navigation {
+    display: flex;
+    flex-direction: row; 
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    list-style: none !important;
+}
+
+.nav-link {
+    padding: 0 20px;
+    line-height: 50px;
+    transition: .3s;
+}
+
+.short-intro {
+    display: flex;
+    flex-direction: row;
+}
+
+.short-intro-text {
+    display: flex;
+    flex-direction: column;
+}
+
 .puppy {
     height: 728px;
     width: 698px;
     right: 0;
 }
 
-.about {
+.about-the-shelter {
     height: 588px;
     width: 1280px;
     left: 0px;
@@ -54,4 +182,32 @@
 }
 .about-text {
     width: 380px;
+}
+
+.pets-page {
+    max-width: 1280px;
+    max-height: 877px;
+    background-color: #F6F6F6;;
+}
+
+.pets-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pets-characters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pet-item {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 270px;
+    height: 435px;
+    align-items: center;
 }
