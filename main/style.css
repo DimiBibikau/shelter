@@ -200,7 +200,7 @@ ul, ol {
 
 .start-screen {
     max-width: 1280px;
-    background-image: url('/assets/images/start-screen.png');
+    background-image: url('../assets/images/start-screen.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
@@ -382,7 +382,7 @@ ul, ol {
 
 .footer {
     max-height: 350px;
-    background-image: url("/assets/images/Footer.png");
+    background-image: url("../assets/images/Footer.png");
 }
 
 .contacts {
