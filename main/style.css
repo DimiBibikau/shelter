@@ -195,7 +195,7 @@ ul, ol {
 .wrapper {
     margin: 0 auto;
     padding: 0 40px;
-    max-width: 1200px;
+    max-width: 1280px;
 }
 
 .start-screen {
@@ -238,6 +238,12 @@ ul, ol {
     padding: 0 20px;
     line-height: 50px;
     transition: .3s;  
+}
+
+.active-link {
+    color: #FAFAFA;
+    padding-bottom: 3px;
+    border-bottom: 3px solid #F1CDB3;
 }
 
 .short-intro {
