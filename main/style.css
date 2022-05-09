@@ -118,6 +118,7 @@ ul, ol {
 }
 .color-primary {
     color:#F1CDB3;
+    padding-bottom: 0;
 }
 /*TEXTS AND FONTS*/
 
@@ -478,7 +479,12 @@ nav a:hover {
 .contacts-title {
     padding-bottom: 40px;
 }
+
 .contacts-logo {
     height: 32px;
     padding-right: 20px;
+}
+
+.contacts-link:hover {
+    color: #FDDCC4;
 }
