@@ -159,12 +159,15 @@ ul, ol {
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0.06em;
-    margin-bottom: 50px;
 }
 
 .button-secondary:hover {
     background-color: #FDDCC4;
     border: 3px solid #FDDCC4
+}
+
+.button-round-row {
+    padding: 30px 0;
 }
 
 .button-round {
@@ -173,9 +176,9 @@ ul, ol {
     left: 0px;
     top: 192px;
     border-radius: 100px;
-    padding: 23px, 19px, 23px, 19px;    
     border: 3px solid #F1CDB3;
     background-color: #F6F6F6;
+    margin: 0 10px;
 }
 
 .button-less {
@@ -206,6 +209,7 @@ ul, ol {
 
 .button-number {
     position: center;
+    background-color:  #F1CDB3;
 }
 
 .button-round:hover {
@@ -218,16 +222,22 @@ ul, ol {
 .wrapper {
     margin: 0 auto;
     padding: 0 40px;
-    max-width: 1280px;
+    max-width: 1200px;
 }
 
 /*HEADER*/
 .header {
+
+}
+
+.header-block {
     display: flex;
     flex-direction: row; 
     width: 100%;
     justify-content: space-between;
+    padding: 30px 0;
 }
+
 .header-navigation {
     display: flex;
     flex-direction: row; 
@@ -271,17 +281,24 @@ nav a:hover {
 
 /*PETS CONTENTS*/
 .pets-content {
-    width: 1280px;
-    height: 1342px;
     background-color: #F6F6F6;
-    justify-content: space-around;
+}
+
+.pets-content-block {
+    justify-content: space-between;
+    padding: 80px 0;
+}
+
+.pets-heading {
+    padding-bottom: 55px;
 }
 
 .pet-item-row {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-bottom: 30px;
 }
 
 
@@ -317,13 +334,14 @@ nav a:hover {
 /*FOOTER*/
 footer {
     max-height: 350px;
-    background-image: url("../assets/images/Footer.png");
+    background: url(noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #211F20;;
 }
 
 .contacts {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .left-column {
