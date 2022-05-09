@@ -240,6 +240,12 @@ ul, ol {
     transition: .3s;  
 }
 
+nav a:hover {
+    color: #FAFAFA;
+    padding-bottom: 3px;
+    border-bottom: 3px solid #F1CDB3;
+}
+
 .active-link {
     color: #FAFAFA;
     padding-bottom: 3px;
