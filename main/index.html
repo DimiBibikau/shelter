@@ -11,8 +11,8 @@
         <!-and some more links connecting relevant fonts->
     </head>
     <body>
-        <div class="wrapper">       
-            <main class="main">
+        <main class="main">
+            <div class="wrapper">
                 <div class="start-screen">
                     <div class="header">
                         <div class="logo">
@@ -36,14 +36,16 @@
                             <button type="button" class="button-primary"><a href="#our-friends">Make a friend</a></button>
                         </div>
                         <div class="puppy">
-                            <img src="../assets/images/start-screen-puppy.png" alt="start-screen-puppy">
+                            <img class="puppy" src="../assets/images/start-screen-puppy.png" alt="start-screen-puppy">
                         </div>
                     </section>
                 </div>
+            </div>
+            <div class="wrapper">
                 <section class="about-the-shelter">
                     <div class="about-content">
                         <div class="about-pic">
-                            <img src="../assets/images/about-pets.png">
+                            <img  src="../assets/images/about-pets.png">
                         </div>
                         <div class="about-text">
                             <h3 class="h3 align-left" id="about">About the shelter “Cozy House”</h3>
@@ -54,6 +56,8 @@
                         </div>
                     </div>
                 </section>
+            </div>
+            <div class="wrapper">
                 <section class="pets-page" id="pets">
                     <div class="section-header">
                         <h3 class="h3 align-center" id="our-friends">Our friends who<br>are looking for a house</h3>
@@ -70,7 +74,7 @@
                                 <h4 class="h4">Jennifer</h4>
                                 <button type="button" class="button-secondary">Learn more</button>
                             </article>
-                            <article class="pet-item">
+                            <article class="pet-item-woody">
                                 <img class="pet-img" src="../assets/images/pets-woody.png" alt="out animal pic">
                                 <h4 class="h4">Woody</h4>
                                 <button type="button" class="button-secondary">Learn more</button>
@@ -81,11 +85,51 @@
                         <button type="button" class="button-primary button-long">Get to know the rest</button>
                         </div>
                 </section>
+            </div>
+            <div class="wrapper">
                 <section class="help" id="help">
                     <div class="section-header">
                         <h3 class="h3 align-center">How you can help<br>our shelter</h3>
                     </div>
                     <div class="ways-to-help">
+                        <div class="three-row-items">
+                            <div class="help-item">
+                                <img class="help-logo" src="../assets/icons/icon-pet-food.svg" alt="food-logo">
+                                <h4 class="h4">Pet food</h4>
+                            </div>
+                            <div class="help-item">
+                                <img class="help-logo" src="../assets/icons/icon-transportation.svg" alt="transportation-logo">
+                                <h4 class="h4">Transportation</h4>
+                            </div>
+                            <div class="help-item">
+                                <img class="help-logo" src="../assets/icons/icon-toys.svg" alt="toys-logo">
+                                <h4 class="h4">Toys</h4>
+                            </div>
+                            <div class="help-item">
+                                <img class="help-logo" src="../assets/icons/icon-bowls-and-cups.svg" alt="bowls-logo">
+                                <h4 class="h4">Bowls and cups</h4>
+                            </div>
+                            <div class="help-item">
+                                <img class="help-logo" src="../assets/icons/icon-shampoos.svg" alt="shampoos-logo">
+                                <h4 class="h4">Shampoos</h4>
+                            </div>
+                            <div class="help-item">
+                                <img class="help-logo" src="../assets/icons/icon-vitamins.svg" alt="vitamins-logo">
+                                <h4 class="h4">Vitamins</h4>
+                            </div>
+                            <div class="help-item">
+                                <img class="help-logo" src="../assets/icons/icon-medicines.svg" alt="medicines-logo">
+                                <h4 class="h4">Medicines</h4>
+                            </div>
+                            <div class="help-item">
+                                <img class="help-logo" src="../assets/icons/icon-collars-leashes.svg" alt="leashes-logo">
+                                <h4 class="h4">Collars and leashes</h4>
+                            </div>
+                            <div class="help-item">
+                                <img class="help-logo" src="../assets/icons/icon-sleeping-area.svg" alt="sleeping-logo">
+                                <h4 class="h4">Sleeping areas</h4>
+                            </div>
+                        </div>
                         <div class="first-row">
                             <div class="help-item">
                                 <img class="help-logo" src="../assets/icons/icon-pet-food.svg" alt="food-logo">
@@ -128,9 +172,11 @@
                         </div>
                     </div>
                 </section>
+            </div>
+            <div class="wrapper">
                 <section class="donation">
                     <div class="donation-contents">
-                        <img src="../assets/images/donation-dog.png" alt="donation-doggo">
+                        <img class="donation-doggo" src="../assets/images/donation-dog.png" alt="donation-doggo">
                         <div class="donation-details">
                             <h3 class="h3 align-left">You can also<br>make donation</h3>
                             <p class="large-text">Name of the bank / Type of bank account</p>
@@ -144,9 +190,9 @@
                             </p>
                         </div>
                     </div>
-
                 </section>
-            </main>
+            </div>
+        </main>
             <footer class="footer">
                 <div class="contacts" id="contacts">
                     <div class="left-column">

@@ -227,18 +227,18 @@ ul, ol {
 /*BUTTONS*/
 
 /*DOCUMENT*/
+
+
 .wrapper {
     margin: 0 auto;
-    padding: 0 40px;
+    /*padding: 0 40px;*/
     max-width: 1280px;
+    border: solid 1px red;
 }
 
 .start-screen {
     max-width: 1280px;
-    background-image: url('../assets/images/start-screen.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
+    background: url('/assets/images/start-screen.png') no-repeat center top;
     padding: 60px 40px 0;
 }
 
@@ -365,6 +365,15 @@ nav a:hover {
     align-items: center;
 }
 
+pet-item-woody {
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    width: 270px;
+    height: 435px;
+    align-items: center;
+}
+
 .pet-item:hover {
     background-color: white;
     cursor: pointer;
@@ -417,6 +426,10 @@ nav a:hover {
 .help-item {
     display: flex;
     flex-direction: column;
+}
+
+.three-row-items {
+    display: none;
 }
 
 .donation {
@@ -487,4 +500,116 @@ nav a:hover {
 
 .contacts-link:hover {
     color: #FDDCC4;
+}
+
+@media (max-width: 1279px) and (min-width: 768px){
+    .wrapper {
+        margin: 0 auto;
+        padding: 0 30px;
+        max-width: 708px;
+    }
+
+    .start-screen {
+        width: 768px;
+        height: 1165px;
+        background-image: url('/assets/images/start-screen-gradient-background.png');
+        background-repeat: no-repeat;
+        background-position: center; 
+        background-size: cover;
+        padding: 60px 40px 0;
+    }
+
+    .short-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .short-intro-text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 163px;
+        width: 460px;
+        height: 322px;
+        justify-content: space-between;
+    }
+    
+    .puppy {
+        width: 569px;
+        height: 593px;
+        right: 0;
+    }
+
+
+    .about-the-shelter {
+        width: 437px;
+        height: 868px;
+        left: 0px;
+        top: 908px;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;  
+    }
+    .about-content {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 0;
+        width: 768px;
+        height: 1048px;
+    }
+
+    .pets-page {
+        width: 768px;
+        height: 877px;
+        background-color: #F6F6F6;;
+    }
+    
+    .pet-item-woody {
+        display: none;
+    }
+
+    .first-row {
+        display: none;
+    }
+    
+    .second-row {
+        display: none;
+    }
+    
+    .three-row-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .donation {
+        height: 783px;
+    }
+
+    .donation-contents {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        width: 915px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .donation-doggo {
+        width: 505px;
+    }
+    
+
+    .footer {
+        height: 639px;
+        border: solid 1px red;
+        background-image: url("../assets/images/start-screen-gradient-background.png");
+    }
+    .contacts {
+        flex-wrap: wrap;
+    }
 }
