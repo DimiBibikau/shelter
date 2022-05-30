@@ -700,7 +700,6 @@ pet-item-woody {
     padding-bottom: 30px;
 }
 
-
  .wrapper {
         margin: 0 auto;
         padding: 0 0;
@@ -809,7 +808,6 @@ pet-item-woody {
         padding-top: 20px;
     }
 /*our pets */
-
     .pets-page {
         display: flex;
         flex-direction: column;
@@ -850,6 +848,7 @@ pet-item-woody {
         padding-top: 40px;
         padding-bottom: 40px;
       }
+      
       .help-logo {
           height: 50px;
           padding-bottom: 15px;
@@ -858,6 +857,7 @@ pet-item-woody {
     .h4 {
         padding-bottom: 15px;
     }
+
     .first-row {
         display: none;
     }
