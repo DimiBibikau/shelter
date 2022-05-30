@@ -240,7 +240,6 @@ ul, ol {
     margin: 0 auto;
     /*padding: 0 40px;*/
     max-width: 1280px;
-    border: solid 1px red;
 }
 
 .start-screen {
@@ -657,7 +656,6 @@ pet-item-woody {
 
     .footer {
         height: 639px;
-        border: solid 1px red;
         background-image: url("../assets/images/start-screen-gradient-background.png");
         padding:0 30px;
         background-size: cover;
@@ -914,7 +912,6 @@ pet-item-woody {
 
     .footer {
         height: 809px;
-        border: solid 1px red;
         background-image: url("../assets/images/start-screen-gradient-background.png");
         padding:0 10px;
         background-size: cover;
