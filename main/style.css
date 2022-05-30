@@ -413,6 +413,10 @@ pet-item-woody {
     cursor: pointer;
 }
 
+.button-mobile {
+    display: none;
+}
+
 .help {
     height: 611px;
 }
@@ -521,6 +525,7 @@ pet-item-woody {
 .contacts-link:hover {
     color: #FDDCC4;
 }
+
 /*tablet version*/
 @media (max-width: 1279px) and (min-width: 768px){
     .wrapper {
@@ -681,7 +686,23 @@ pet-item-woody {
 @media (max-width: 767px){
 .h4 {
     padding-bottom: 5px;
+    font-size: 17px;
 }
+
+.h4 {
+    font-family: Georgia, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #545454;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+}
+
+
  .wrapper {
         margin: 0 auto;
         padding: 0 0;
@@ -775,7 +796,6 @@ pet-item-woody {
         font-size: 25px;
         text-align: center;
         line-height: 32.5px;
-        margin-top: 40px;
     }
 
     .about-text {
@@ -868,6 +888,23 @@ pet-item-woody {
     .donation-contents {
         flex-direction: column-reverse;
         align-items: center;
+        width: 280px;
+    }
+
+    .donation-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 280px;
+    }
+
+    .small-text {
+        text-align: justify;
+    }
+
+    .button-donation {
+        width: 280px;
+        font-size: 15px;
     }
 
     .donation-doggo {
