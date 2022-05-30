@@ -244,7 +244,7 @@ ul, ol {
 
 .start-screen {
     max-width: 1280px;
-    background: url('/assets/images/start-screen.png') no-repeat center top;
+    background: url('../assets/images/start-screen.png') no-repeat center top;
     padding: 60px 40px 0;
 }
 
@@ -536,7 +536,7 @@ pet-item-woody {
     .start-screen {
         width: 768px;
         height: 1165px;
-        background: url('/assets/images/start-screen-gradient-background.png') no-repeat center;
+        background: url('../assets/images/start-screen-gradient-background.png') no-repeat center;
         padding: 0 0;
         background-size: cover;
     }
@@ -710,7 +710,7 @@ pet-item-woody {
     .start-screen {
         width: 320px;
         height: 823px;
-        background: url('/assets/images/start-screen-gradient-background.png') no-repeat center;
+        background: url('../assets/images/start-screen-gradient-background.png') no-repeat center;
         padding: 0 0;
         background-size: cover;
     }
