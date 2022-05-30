@@ -160,7 +160,7 @@ ul, ol {
     top: 645px;
     border-radius: 100px;
     padding: 15px, 45px, 15px, 45px;   
-    border: 3px solid #F1CDB3;
+    border: 2px solid #F1CDB3;
     background-color: #FFFFFF;
     color: #292929;
     font-family: Georgia;
@@ -172,7 +172,7 @@ ul, ol {
 
 .button-secondary:hover {
     background-color: #FDDCC4;
-    border: 3px solid #FDDCC4
+    border: 2px solid #FDDCC4
 }
 
 .button-long {
@@ -186,7 +186,7 @@ ul, ol {
     top: 192px;
     border-radius: 100px;
     padding: 23px, 19px, 23px, 19px;    
-    border: 3px solid #F1CDB3;
+    border: 2px solid #F1CDB3;
     background-color: #F6F6F6;
 }
 
@@ -260,6 +260,10 @@ ul, ol {
     flex-direction: row; 
     justify-content: space-between;
     list-style: none !important;
+}
+
+.header-navigation-burger {
+    display: none;
 }
 
 .navigation {
@@ -541,13 +545,17 @@ pet-item-woody {
         background-size: cover;
     }
 
-.header {
-    display: flex;
-    flex-direction: row; 
-    width: calc(100% - 60px);
-    justify-content: space-between;
-    padding: 30px 30px;
-}
+    .header {
+        display: flex;
+        flex-direction: row; 
+        width: calc(100% - 60px);
+        justify-content: space-between;
+        padding: 30px 30px;
+    }
+
+    .header-navigation-burger {
+        display: none;
+    }
 
     .heading-768px {
         display: block;
@@ -726,6 +734,11 @@ pet-item-woody {
         display: none;
     }
 
+    .header-navigation-burger {
+        display: block;
+        align-self: center;
+    }
+
     .heading-768px {
         display: block;
     }
@@ -848,7 +861,7 @@ pet-item-woody {
         padding-top: 40px;
         padding-bottom: 40px;
       }
-      
+
       .help-logo {
           height: 50px;
           padding-bottom: 15px;
