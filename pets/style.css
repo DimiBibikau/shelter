@@ -163,18 +163,19 @@ ul, ol {
 
 .button-secondary:hover {
     background-color: #FDDCC4;
-    border: 3px solid #FDDCC4
+    border: 2px solid #FDDCC4
 }
 
 .button-round-row {
-    padding: 30px 0;
+    width: 1200px;
+    padding: 0 0 40px 0;
 }
 
 .button-round {
     height: 52px;
     width: 52px;
     border-radius: 100px;
-    border: 3px solid #F1CDB3;
+    border: 2px solid #F1CDB3;
     background-color: #F6F6F6;
     margin: 0 10px;
 }
@@ -188,24 +189,24 @@ ul, ol {
     background-image: url('../assets/icons/less.png');
     background-repeat: no-repeat;
     background-position: center;
-    border: 3px solid #CDCDCD;
+    border: 2px solid #CDCDCD;
 }
 
 .button-much-less {
     background-image: url('../assets/icons/much-less.png');
     background-repeat: no-repeat;
     background-position: center;
-    border: 3px solid #CDCDCD;
+    border: 2px solid #CDCDCD;
 }
 
-.button-less:disabled, 
-.button-much-less:disabled, 
-.button-less:hover:disabled, 
-.button-much-less:hover:disabled {
-    cursor: default!important;
-    background-color: #F6F6F6;
-    border: 3px solid #CDCDCD;
-}
+    .button-less:disabled, 
+    .button-much-less:disabled, 
+    .button-less:hover:disabled, 
+    .button-much-less:hover:disabled {
+        cursor: default!important;
+        background-color: #F6F6F6;
+        border: 2px solid #CDCDCD;
+    }
 
 .button-number:hover:disabled {
     cursor: default!important;
@@ -309,11 +310,11 @@ nav .active-link a:hover {
 
 .pets-content-block {
     justify-content: space-between;
-    padding: 80px 0;
+    padding: 80px 0 0;
 }
 
 .pets-heading {
-    padding-bottom: 55px;
+    padding-top: 40px;
 }
 
 .pet-item-row {
@@ -373,7 +374,7 @@ footer {
 }
 
 .right-column {
-    width: 302px;
+    width: 300px;
     padding-top: 56px;
 }
 
@@ -423,13 +424,18 @@ footer {
         flex-wrap: wrap;
     }
 
+    .button-round-row {
+        width: 700px;
+        padding: 0 0 40px 0;
+    }
+
     .left-column {
         width: 290px;
         padding-top: 40px;
     }
     
     .right-column {
-        width: 302px;
+        width: 300px;
         padding-top: 40px;
     }
     
@@ -469,17 +475,18 @@ footer {
         align-self: center;
     }
 
+    .pets-heading {
+        padding-top: 40px;
+        padding-left: 10px;
+    }
+
     .pets-content-block {
         justify-content: space-between;
-        padding: 40px 25px;
-      }
-    
-    .pets-heading {
-        padding-bottom: 40px;
-        width: 300px;
+        padding: 40px 0 25px 25px;
     }
 
     .header-mobile {
+        width: 270px;
         font-size: 25px;
         text-align: center;
         line-height: 32.5px;
@@ -496,8 +503,40 @@ footer {
 
     .item-invisible-mobile {
         display: none;
+    }x
+
+/*BUTTON ROW*/
+    .button-round-row {
+        width: 320px;
+        padding: 0 40px;
     }
 
+    .button-round {
+        height: 52px;
+        width: 52px;
+        border-radius: 100px;
+        border: 2px solid #F1CDB3;
+        background-color: #F6F6F6;
+        margin: 0 3px;
+    }
+    .button-number:disabled,
+    .button-number:hover:disabled {
+        cursor: default!important;
+        background-color:#F1CDB3;
+        border: 2px solid #F1CDB3;
+    }
+
+    .button-less:disabled, 
+    .button-much-less:disabled, 
+    
+    .button-less:hover:disabled, 
+    .button-much-less:hover:disabled {
+        cursor: default!important;
+        background-color: #F6F6F6;
+        border: 2px solid #CDCDCD;
+    }
+
+/*FOOTER*/
     .footer {
         height: 809px;
         padding: 10px;
@@ -511,14 +550,14 @@ footer {
     }
 
     .left-column {
-        width: 290px;
-        padding-top: 30px;
+        width: 260px;
+        padding: 30px;
         display: flex;
         flex-direction: column;
     }
     
     .right-column {
-        width: 302px;
+        width: 300px;
         padding-top: 0;
         display: flex;
         flex-direction: column;
