@@ -266,6 +266,10 @@ ul, ol {
     display: none;
 }
 
+.hamburger-navigation {
+    display: none;
+}
+
 .navigation {
     display: flex;
     flex-direction: row;
@@ -560,6 +564,10 @@ pet-item-woody {
         display: none;
     }
 
+    .hamburger-navigation {
+        display: none;
+    }
+
     .heading-768px {
         display: block;
     }
@@ -693,25 +701,25 @@ pet-item-woody {
 
 /*mobile version*/
 @media (max-width: 767px){
-.h4 {
-    padding-bottom: 5px;
-    font-size: 17px;
-}
+    .h4 {
+        padding-bottom: 5px;
+        font-size: 17px;
+    }
 
-.h5 {
-    font-family: Georgia, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 23px;
-    letter-spacing: 0.06em;
-    text-align: center;
-    color: #545454;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 30px;
-}
+    .h5 {
+        font-family: Georgia, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: #545454;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 30px;
+    }
 
- .wrapper {
+    .wrapper {
         margin: 0 auto;
         padding: 0 0;
         max-width: 320px;
@@ -736,11 +744,46 @@ pet-item-woody {
     .header-navigation {
         display: none;
     }
-
+/*BURGER MENU*/
     .header-navigation-burger {
         display: block;
         align-self: center;
+        background: transparent;
+        border: none;
     }
+
+    .hamburger {
+        /* position: fixed;
+        z-index: 100; */
+        background-image: src="../assets/images/background_hamburger.png";
+        width: 310px;
+        height: 823px;
+    }
+
+    .burger-menu-vertical {
+        display: none;
+    }
+
+    .hamburger-menu {
+        /* position: fixed;
+        z-index: 100; 
+        top: 0;
+        left: 0;
+        */
+        background-image: src="../assets/images/background_hamburger.png";
+        width: 310px;
+        height: 823px;
+        list-style: none;
+
+        transition: transform 0.3s;
+        transform: translateY(-100%);
+    }
+
+    .show-menu {
+        transform: translateY(0);
+    }
+
+
 
     .heading-768px {
         display: block;
