@@ -537,6 +537,7 @@ footer {
         height: 823px;
         transition: transform 0.3s;
         transform: translateY(-110%);
+        animation: come-in 2.8s ease forwards;
     }
 
     .hamburger-navigation:hover:after {

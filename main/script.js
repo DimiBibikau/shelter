@@ -4,7 +4,6 @@ const menuItems = document.querySelectorAll(".hamburger-nav-item");
 const menuIcon = document.querySelector(".burger-menu");
 const closeIcon = document.querySelector(".burger-menu-vertical");
 
-// // const header = document.querySelector(".header");
 const logo = document.querySelector(".logo")
 
 function burgerMenu () {
@@ -18,9 +17,7 @@ function burgerMenu () {
         closeIcon.style.display = "block";
         menuIcon.style.display = "none";
         menu.style.display = "flex";
-        logo.style.display = "none"
-        // header.style.display = "none"
-        
+        logo.style.display = "none"       
     }
 }
 
