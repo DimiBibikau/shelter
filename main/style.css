@@ -560,6 +560,7 @@ pet-item-woody {
         padding: 30px 30px;
     }
 
+
     .header-navigation-burger {
         display: none;
     }
@@ -719,6 +720,12 @@ pet-item-woody {
         padding-bottom: 30px;
     }
 
+    .main-white {
+        font-size: 25px;
+        line-height: 32.5px;
+        text-align: center;
+    }
+
     .wrapper {
         margin: 0 auto;
         padding: 0 0;
@@ -731,6 +738,10 @@ pet-item-woody {
         background: url('../assets/images/start-screen-gradient-background.png') no-repeat center;
         padding: 0 0;
         background-size: cover;
+    }
+
+    .logo {
+
     }
 
     .header {
@@ -752,48 +763,49 @@ pet-item-woody {
         border: none;
     }
 
-    .hamburger {
-        /* position: fixed;
-        z-index: 100; */
-        background-image: src="../assets/images/background_hamburger.png";
+    .hamburger-navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-content: center;
+        background-image: url("../assets/images/background_hamburger.png");
         width: 310px;
         height: 823px;
+        transition: transform 0.3s;
+        transform: translateY(-100%);
+    }
+
+    .hamburger-nav-item {
+        font-family: Arial;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left; 
+        color:#FFFFFF;
+        padding-top: 40px;
+        align-self: center;
     }
 
     .burger-menu-vertical {
         display: none;
     }
 
-    .hamburger-menu {
-        /* position: fixed;
-        z-index: 100; 
-        top: 0;
-        left: 0;
-        */
-        background-image: src="../assets/images/background_hamburger.png";
-        width: 310px;
-        height: 823px;
-        list-style: none;
-
-        transition: transform 0.3s;
-        transform: translateY(-100%);
+    .burger-menu {
+        display: block;
     }
 
     .show-menu {
         transform: translateY(0);
     }
 
-
-
     .heading-768px {
         display: block;
     }
 
-    .main-white {
-        font-size: 25px;
-        line-height: 32.5px;
-        text-align: center;
-    }
+    
 
     .short-intro {
         display: flex;
