@@ -541,11 +541,11 @@ pet-item-woody {
     .wrapper {
         margin: 0 auto;
         padding: 0 0;
-        max-width: 768px;
+        max-width: 100%;
     }
 
     .start-screen {
-        width: 768px;
+        width: 100%;
         height: 1165px;
         background: url('../assets/images/start-screen-gradient-background.png') no-repeat center;
         padding: 0 0;
@@ -606,7 +606,7 @@ pet-item-woody {
     }
 
     .about-the-shelter {
-        width: 437px;
+        width: 100%;
         height: 1048px;
     }
 
@@ -616,7 +616,7 @@ pet-item-woody {
         justify-content: space-evenly;
         align-items: center;
         padding-top: 80px;
-        width: 768px;
+        width: 100%;
         height: 868px;
     }
 
@@ -630,7 +630,7 @@ pet-item-woody {
     }
 
     .pets-page {
-        width: 768px;
+        width: 100%;
         height: 877px;
         background-color: #F6F6F6;;
     }
@@ -729,11 +729,11 @@ pet-item-woody {
     .wrapper {
         margin: 0 auto;
         padding: 0 0;
-        max-width: 320px;
+        max-width: 100%;
     }
 
     .start-screen {
-        width: 320px;
+        width: 100%;
         height: 823px;
         background: url('../assets/images/start-screen-gradient-background.png') no-repeat center;
         padding: 0 0;
@@ -755,7 +755,7 @@ pet-item-woody {
     .header {
         display: flex;
         flex-direction: row; 
-        width: 257px;
+        width: calc(100% - 40px);
         justify-content: space-between;
         padding: 30px 20px;
     }
@@ -779,7 +779,7 @@ pet-item-woody {
         flex-direction: column;
         align-content: center;
         background-image: url("../assets/images/background_hamburger.png");
-        width: 310px;
+        width: 320px;
         height: 823px;
         transition: transform 0.3s;
         transform: translateY(-100%);
@@ -825,8 +825,6 @@ pet-item-woody {
         display: block;
     }
 
-    
-
     .short-intro {
         display: flex;
         flex-direction: column;
@@ -866,7 +864,7 @@ pet-item-woody {
     }
 /*about the shelter page*/
     .about-the-shelter {
-        width: 320px;
+        width: 100%;
         height: 974px;
     }
 
@@ -875,7 +873,7 @@ pet-item-woody {
         flex-direction: column-reverse;
         justify-content: space-evenly;
         align-items: center;
-        width: 270px;
+        width: calc(100% - 60px);
         height: 974px;
         padding: 0 25px;
     }
@@ -887,7 +885,7 @@ pet-item-woody {
     }
 
     .about-text {
-        width: 270px;
+        width: calc(100% - 50px);
     }
 
     .about-text-chapter {
@@ -895,7 +893,7 @@ pet-item-woody {
     }
 
     .about-pic {
-        width: 260px;
+        width: 270px;
         padding-top: 20px;
     }
 /*our pets */
