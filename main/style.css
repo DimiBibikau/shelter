@@ -744,6 +744,13 @@ pet-item-woody {
 
     }
 
+    .logo-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
     .header {
         display: flex;
         flex-direction: row; 

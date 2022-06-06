@@ -27,8 +27,13 @@ function burgerMenu () {
 }
 
 menuIcon.addEventListener("click", burgerMenu);
+closeIcon.addEventListener("click", burgerMenu);
 
-menuItems.forEach((menuItem) => menuItem.addEventListener("click", burgerMenu));
+menuItems.forEach(
+    function (menuItem) {
+        menuItem.addEventListener("click", burgerMenu);
+    }
+);
 
 const renderPetShelter = () => {
 
