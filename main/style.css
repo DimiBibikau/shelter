@@ -560,7 +560,6 @@ pet-item-woody {
         padding: 30px 30px;
     }
 
-
     .header-navigation-burger {
         display: none;
     }
@@ -751,7 +750,6 @@ pet-item-woody {
         padding: 40px 10px 150px 10px;
     }
 
-
     .header {
         display: flex;
         flex-direction: row; 
@@ -774,7 +772,7 @@ pet-item-woody {
     .hamburger-navigation {
         position: fixed;
         top: 0;
-        left: 0;
+        right: 0;
         display: none;
         flex-direction: column;
         align-content: center;
@@ -782,7 +780,7 @@ pet-item-woody {
         width: 320px;
         height: 823px;
         transition: transform 0.3s;
-        transform: translateY(-100%);
+        transform: translateY(-110%);
     }
 
     .hamburger-navigation:hover:after {
@@ -795,7 +793,7 @@ pet-item-woody {
         background-color: black;
         opacity: 0.5;
         z-index: 100;
-      }
+    }
 
     .hamburger-nav-item {
         font-family: Arial;
@@ -819,6 +817,10 @@ pet-item-woody {
 
     .show-menu {
         transform: translateY(0);
+    }
+
+    .active-link {
+        font-size: 32px;
     }
 
     .heading-768px {
@@ -864,7 +866,7 @@ pet-item-woody {
     }
 /*about the shelter page*/
     .about-the-shelter {
-        width: 100%;
+        width: calc(100% - 50px);;
         height: 974px;
     }
 
@@ -873,9 +875,9 @@ pet-item-woody {
         flex-direction: column-reverse;
         justify-content: space-evenly;
         align-items: center;
-        width: calc(100% - 60px);
+        width: 100%;
         height: 974px;
-        padding: 0 25px;
+        padding: 25px;
     }
 
     .header-mobile {
@@ -885,7 +887,7 @@ pet-item-woody {
     }
 
     .about-text {
-        width: calc(100% - 50px);
+        width: 100%;
     }
 
     .about-text-chapter {
@@ -936,12 +938,12 @@ pet-item-woody {
     .section-header {
         padding-top: 40px;
         padding-bottom: 40px;
-      }
+    }
 
-      .help-logo {
-          height: 50px;
-          padding-bottom: 15px;
-      }
+    .help-logo {
+        height: 50px;
+        padding-bottom: 15px;
+    }
 
     .h4 {
         padding-bottom: 15px;
@@ -970,7 +972,7 @@ pet-item-woody {
         display: flex;
         align-items: center;
         padding:0 10px;
-      }
+    }
 
     .donation-contents {
         flex-direction: column-reverse;
