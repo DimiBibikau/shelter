@@ -538,17 +538,6 @@ footer {
         transition: transform 0.3s;
         transform: translateY(-110%);
         animation: come-in 2.8s ease forwards;
-    }
-
-    .hamburger-navigation:hover:after {
-        content: '';
-        position: fixed;
-        top: 823px;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        background-color: black;
-        opacity: 0.5;
         z-index: 100;
     }
 
@@ -578,6 +567,16 @@ footer {
 
     .active-link {
         font-size: 32px;
+    }
+
+    .dim-click-div {
+        position: absolute; 
+        display: none;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:rgba(255,255,255,0.9);
     }
     /* MOBILE MENU */
 
