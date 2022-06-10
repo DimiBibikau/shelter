@@ -535,7 +535,7 @@ footer {
         background-image: url("../assets/images/background_hamburger.png");
         width: 320px;
         height: 823px;
-        transition: transform 0.3s;
+        transition: transform 0.5s;
         transform: translateY(-110%);
         animation: come-in 2.8s ease forwards;
         z-index: 100;

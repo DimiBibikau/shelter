@@ -1,3 +1,5 @@
+// renderPetShelter()
+
 const menu = document.querySelector(".hamburger-navigation");
 const menuItems = document.querySelectorAll(".hamburger-nav-item");
 
@@ -40,12 +42,108 @@ menuItems.forEach(
     }
 );
 
+const petCardsArray = [
+    {
+      "name": "Jennifer",
+      "img": "../../assets/images/jennifer.png",
+      "type": "Dog",
+      "breed": "Labrador",
+      "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
+      "age": "2 months",
+      "inoculations": ["none"],
+      "diseases": ["none"],
+      "parasites": ["none"]
+    },
+    {
+      "name": "Sophia",
+      "img": "../../assets/images/sophia.png",
+      "type": "Dog",
+      "breed": "Shih tzu",
+      "description": "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
+      "age": "1 month",
+      "inoculations": ["parvovirus"],
+      "diseases": ["none"],
+      "parasites": ["none"]
+    },
+    {
+      "name": "Woody",
+      "img": "../../assets/images/woody.png",
+      "type": "Dog",
+      "breed": "Golden Retriever",
+      "description": "Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.",
+      "age": "3 years 6 months",
+      "inoculations": ["adenovirus", "distemper"],
+      "diseases": ["right back leg mobility reduced"],
+      "parasites": ["none"]
+    },
+]
+
 const renderPetShelter = () => {
     const tagCreator = (tag, className, parentTag, indexParentTag = 0) => {
         const element = document.createElement(tag);
         element.classList.add(className);
         document.querySelectorAll(parentTag)[indexParentTag].append(element);
     }
+
+    tagCreator("button", "button-round-left", ".pets-characters");
+
+    for (let petCard in petCardsArray) { 
+        // creating the pet card
+        tagCreator("article", "pet-item", ".pets-characters");
+        tagCreator("img", "pet-img", ".pet-item", petCard);
+        tagCreator("h4", "h4", ".pet-item", petCard);
+        tagCreator("button", "button-secondary-clickable", ".pet-item", petCard);
+        
+        // filling the pet card 
+        document.querySelectorAll(".pet-img")[petCard].src = petCardsArray[petCard].img;
+        document.querySelectorAll(".h4")[petCard].textContent = petCardsArray[petCard].name;
+        document.querySelectorAll(".button-secondary-clickable")[petCard].textContent = "Learn more";
+        
+        // creating the pop up window
+        tagCreator("div", "pet-item-pop-up", ".pets-characters");
+
+        const petCardKeys = Object.keys(petCardsArray[petCard]);
+    
+        for (let key in petCardKeys) {
+            if (petCardKeys[key] !== "img") {
+                tagCreator("h4", `pet-${petCardKeys[key]}-pop-up`, ".pet-item-pop-up", petCard);
+                document.querySelectorAll(`.pet-${petCardKeys[key]}-pop-up`)[petCard].textContent = `Pet ${petCardKeys[key]}: ${petCardsArray[petCard][petCardKeys[key]]}`;
+            }  
+        }
+        // tagCreator("h4", "pet-name-pop-up", ".pet-item-pop-up", petCard);
+        // tagCreator("h4", "pet-type-pop-up", ".pet-item-pop-up", petCard);
+        // tagCreator("h4", "pet-breed-pop-up", ".pet-item-pop-up", petCard);
+        // tagCreator("h4", "pet-description-pop-up", ".pet-item-pop-up", petCard);
+        // tagCreator("h4", "pet-age-pop-up", ".pet-item-pop-up", petCard);
+        // tagCreator("h4", "pet-inoculations-pop-up", ".pet-item-pop-up", petCard);
+        // tagCreator("h4", "pet-diseases-pop-up", ".pet-item-pop-up", petCard);
+        // tagCreator("h4", "pet-parasites-pop-up", ".pet-item-pop-up", petCard);
+        // // filling the pop up window
+        // document.querySelectorAll(".pet-name-pop-up")[petCard].textContent = `Pet name: ${petCardsArray[petCard].name}`;
+        // document.querySelectorAll(".pet-type-pop-up")[petCard].textContent = `Type: ${petCardsArray[petCard].type}`;
+        // document.querySelectorAll(".pet-breed-pop-up")[petCard].textContent = `Breed: ${petCardsArray[petCard].breed}`;
+        // document.querySelectorAll(".pet-description-pop-up")[petCard].textContent = `Description: ${petCardsArray[petCard].description}`;
+        // document.querySelectorAll(".pet-age-pop-up")[petCard].textContent = `Age: ${petCardsArray[petCard].age}`;
+        // document.querySelectorAll(".pet-inoculations-pop-up")[petCard].textContent = `Inoculations: ${petCardsArray[petCard].inoculations}`;
+        // document.querySelectorAll(".pet-diseases-pop-up")[petCard].textContent = `Diseases: ${petCardsArray[petCard].diseases}`;
+        // document.querySelectorAll(".pet-parasites-pop-up")[petCard].textContent = `Parasites: ${petCardsArray[petCard].parasites}`;
+    }
+
+    tagCreator("button", "button-round-right", ".pets-characters");
+
+    const buttonInfoArray = document.querySelectorAll(".button-secondary-clickable");
+
+    for (let [index, buttonElem] of buttonInfoArray.entries()) {
+        buttonElem.addEventListener("click", () => {
+            document.querySelectorAll(".pet-item-pop-up")[index].classList.add("active-pop-up");
+            dimClickOut.style.display = "block";
+        })
+    }
+
+    const sliderButtonLeft = document.querySelectorAll(".button-round-left");
+    const sliderButtonRight = document.querySelectorAll(".button-round-right");
+    alert(Object.keys(sliderButtonLeft))
 }
 
 renderPetShelter()
+
