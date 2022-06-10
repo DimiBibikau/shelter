@@ -170,6 +170,29 @@ ul, ol {
     letter-spacing: 0.06em;
 }
 
+.button-secondary-clickable {
+    height: 52px;
+    width: 187px;
+    left: 470px;
+    top: 645px;
+    border-radius: 100px;
+    padding: 15px, 45px, 15px, 45px;   
+    border: 2px solid #F1CDB3;
+    background-color: #FFFFFF;
+    color: #292929;
+    font-family: Georgia;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    align-self: center;
+}
+
+.button-secondary-clickable:hover {
+    background-color: #FDDCC4;
+    border: 2px solid #FDDCC4
+}
+
 .button-secondary:hover {
     background-color: #FDDCC4;
     border: 2px solid #FDDCC4
@@ -191,12 +214,30 @@ ul, ol {
 }
 
 .button-round-left {
+    height: 52px;
+    width: 52px;
+    left: 0px;
+    top: 192px;
+    border-radius: 100px;
+    padding: 23px, 19px, 23px, 19px;    
+    border: 2px solid #F1CDB3;
+    background-color: #F6F6F6;
+
     background-image: url('../assets/icons/arrow-left.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .button-round-right {
+    height: 52px;
+    width: 52px;
+    left: 0px;
+    top: 192px;
+    border-radius: 100px;
+    padding: 23px, 19px, 23px, 19px;    
+    border: 2px solid #F1CDB3;
+    background-color: #F6F6F6;
+
     background-image: url('../assets/icons/arrow-right.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -375,6 +416,15 @@ nav a:hover {
     padding-bottom: 60px;
 }
 
+.pets-characters-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 60px;
+}
+
 .pet-item {
     display: flex;
     flex-direction: column;
@@ -415,10 +465,62 @@ pet-item-woody {
     text-align: center;
 }
 
-.pets-item:hover button-secondary {
+.pet-item:hover button-secondary {
     background-color: #F1CDB3;
     cursor: pointer;
 }
+
+/* pet item pop up window start  */
+.pet-item-pop-up {
+    display: none;
+    flex-direction: column;
+
+    padding: 10px;
+
+    border: solid 3px gold;
+    width: 350px;
+    height: 700px;
+    
+    background-color: white;
+
+    z-index: 100;
+}
+
+.active-pop-up {
+    display: flex;
+}
+
+.pet-name-pop-up {
+    font-size: 20px;
+}
+
+.pet-type-pop-up {
+    font-size: 20px; 
+}
+.pet-breed-pop-up {
+    font-size: 20px;
+}
+
+.pet-description-pop-up {
+    font-size: 20px;
+}
+
+.pet-age-pop-up {
+    font-size: 20px;
+}
+
+.pet-inoculations-pop-up {
+    font-size: 20px;
+}
+
+.pet-diseases-pop-up {
+    font-size: 20px;
+}
+
+.pet-parasites-pop-up {
+    font-size: 20px;
+}
+/* pet item pop up window end */
 
 .button-mobile {
     display: none;
@@ -534,6 +636,17 @@ pet-item-woody {
 
 .contacts-link:hover {
     color: #FDDCC4;
+}
+
+.dim-click-div {
+    position: absolute; 
+    display: none;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(41,41,41,0.6);
+    z-index: 100;
 }
 
 /*tablet version*/
@@ -761,7 +874,7 @@ pet-item-woody {
     .header-navigation {
         display: none;
     }
-/*BURGER MENU*/
+/*START OF BURGER MENU*/
     .header-navigation-burger {
         display: block;
         align-self: center;
@@ -779,19 +892,8 @@ pet-item-woody {
         background-image: url("../assets/images/background_hamburger.png");
         width: 320px;
         height: 823px;
-        transition: transform 0.3s;
+        transition: transform 0.5s;
         transform: translateY(-110%);
-    }
-
-    .hamburger-navigation:hover:after {
-        content: '';
-        position: fixed;
-        top: 823px;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        background-color: black;
-        opacity: 0.5;
         z-index: 100;
     }
 
@@ -822,7 +924,17 @@ pet-item-woody {
     .active-link {
         font-size: 32px;
     }
-
+    
+    .dim-click-div {
+        position: absolute; 
+        display: none;
+        top: 0; 
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color:rgba(41,41,41,0.6);
+    }
+/* END OF SLIDE MENU */
     .heading-768px {
         display: block;
     }
