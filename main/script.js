@@ -103,7 +103,8 @@ const renderPetShelter = () => {
         tagCreator("div", "pet-item-pop-up", ".pets-characters");
         tagCreator("div", "pet-item-pop-up-content", ".pet-item-pop-up", petCard);
         tagCreator("div", "pet-item-text-content", ".pet-item-pop-up-content", petCard);
-       
+        // creating the close button for the pop up
+        tagCreator("button", "button-close-pop-up", ".pet-item-text-content", petCard);
         // creating the pop up window contents
         tagCreator("h3", "pet-name-pop-up", ".pet-item-text-content", petCard);
         tagCreator("img", "pet-pic-pop-up", ".pet-item-pop-up-content", petCard);
@@ -134,6 +135,15 @@ const renderPetShelter = () => {
         buttonElem.addEventListener("click", () => {
             document.querySelectorAll(".pet-item-pop-up")[index].classList.add("active-pop-up");
             dimClickOut.style.display = "block";
+        })
+    }
+
+    const buttonInfoCloseArray = document.querySelectorAll(".button-close-pop-up");
+
+    for (let [index, buttonElem] of buttonInfoCloseArray.entries()) {
+        buttonElem.addEventListener("click", () => {
+            document.querySelectorAll(".pet-item-pop-up")[index].classList.remove("active-pop-up");
+            dimClickOut.style.display = "none";
         })
     }
 
