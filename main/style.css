@@ -473,52 +473,82 @@ pet-item-woody {
 /* pet item pop up window start  */
 .pet-item-pop-up {
     display: none;
+    position: absolute;
     flex-direction: column;
 
     padding: 10px;
 
-    border: solid 3px gold;
-    width: 350px;
-    height: 700px;
+    width: 900px;
+    height: 500px;
     
     background-color: white;
 
     z-index: 100;
 }
 
+.pet-item-pop-up-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.pet-item-text-content {
+    display: flex;
+    flex-direction: column;
+    font: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 351px;
+    padding: 0 30px 0 20px;
+}
+
+.pet-pic-pop-up {
+    width: 500px;
+    height: 500px;
+}
+.pet-description-pop-up-list {
+    padding: 10px;
+    list-style:disc;
+}
+
 .active-pop-up {
     display: flex;
 }
 
+.passive-pop-up {
+    display: none;
+}
+
 .pet-name-pop-up {
-    font-size: 20px;
+    font-size: 35px;
 }
 
 .pet-type-pop-up {
     font-size: 20px; 
 }
-.pet-breed-pop-up {
-    font-size: 20px;
-}
 
 .pet-description-pop-up {
-    font-size: 20px;
+    font-size: 15px;
+    padding-bottom: 0;
+    line-height: 16.5px
 }
 
 .pet-age-pop-up {
-    font-size: 20px;
+    font-size: 15px;
+    padding-bottom: 10px;
 }
 
 .pet-inoculations-pop-up {
-    font-size: 20px;
+    font-size: 15px;
+    padding-bottom: 10px;
 }
 
 .pet-diseases-pop-up {
-    font-size: 20px;
+    font-size: 15px;
+    padding-bottom: 10px;
 }
 
 .pet-parasites-pop-up {
-    font-size: 20px;
+    font-size: 15px;
+    padding-bottom: 10px;
 }
 /* pet item pop up window end */
 
