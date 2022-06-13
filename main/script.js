@@ -49,7 +49,7 @@ menuItems.forEach(
 const petCardsArray = [
     {
       "name": "Jennifer",
-      "img": "../../assets/images/jennifer.png",
+      "img": "../assets/images/jennifer.png",
       "type": "Dog",
       "breed": "Labrador",
       "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
@@ -60,7 +60,7 @@ const petCardsArray = [
     },
     {
       "name": "Sophia",
-      "img": "../../assets/images/sophia.png",
+      "img": "../assets/images/sophia.png",
       "type": "Dog",
       "breed": "Shih tzu",
       "description": "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
@@ -71,7 +71,7 @@ const petCardsArray = [
     },
     {
       "name": "Woody",
-      "img": "../../assets/images/woody.png",
+      "img": "../assets/images/woody.png",
       "type": "Dog",
       "breed": "Golden Retriever",
       "description": "Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.",
@@ -147,7 +147,6 @@ const renderPetShelter = () => {
 
     // POP UP WINDOW BUTTON DEACTIVATION
     const buttonInfoCloseArray = document.querySelectorAll(".button-close-pop-up");
-    const clickerPopUp = document.querySelectorAll(".pop-up-overlay");
 
     for (let [index, buttonElem] of buttonInfoCloseArray.entries()) {
         buttonElem.addEventListener("click", () => {
@@ -155,18 +154,18 @@ const renderPetShelter = () => {
             dimClickOut.style.display = "none";
             document.body.classList.remove("stop-scrolling");
         })
+
+        dimClickOut.addEventListener ("click", () => {
+            document.querySelector(".pet-item-pop-up")[index].classList.remove("active-pop-up");
+            dimClickOut.style.display = "none";
+            document.body.classList.remove("stop-scrolling");
+        })
     }
-
-    dimClickOut.addEventListener ("click", () => {
-        document.querySelector(".pet-item-pop-up").classList.remove("active-pop-up");
-        dimClickOut.style.display = "none";
-        document.body.classList.remove("stop-scrolling");
-    })
-
 
     const sliderButtonLeft = document.querySelectorAll(".button-round-left");
     const sliderButtonRight = document.querySelectorAll(".button-round-right");
-    
+
+
 }
 
 renderPetShelter()
