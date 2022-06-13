@@ -19,6 +19,8 @@ function burgerMenu () {
 
         menuIcon.style.display = "block";
         logo.style.display = "block";
+
+        document.body.classList.remove("stop-scrolling");
         
     } else {
         menu.classList.add("show-menu");
@@ -28,7 +30,9 @@ function burgerMenu () {
         menu.style.display = "flex";
         logo.style.display = "none";
         
-        dimClickOut.style.display = "block";       
+        dimClickOut.style.display = "block"; 
+
+        document.body.classList.add("stop-scrolling");      
     }
 }
 
@@ -100,50 +104,83 @@ const renderPetShelter = () => {
         document.querySelectorAll(".button-secondary-clickable")[petCard].textContent = "Learn more";
         
         // creating the pop up window
+        // tagCreator("div", "pop-up-overlay", ".pets-characters");
         tagCreator("div", "pet-item-pop-up", ".pets-characters");
-
-        const petCardKeys = Object.keys(petCardsArray[petCard]);
-    
-        for (let key in petCardKeys) {
-            if (petCardKeys[key] !== "img") {
-                tagCreator("h4", `pet-${petCardKeys[key]}-pop-up`, ".pet-item-pop-up", petCard);
-                document.querySelectorAll(`.pet-${petCardKeys[key]}-pop-up`)[petCard].textContent = `Pet ${petCardKeys[key]}: ${petCardsArray[petCard][petCardKeys[key]]}`;
-            }  
-        }
-        // tagCreator("h4", "pet-name-pop-up", ".pet-item-pop-up", petCard);
-        // tagCreator("h4", "pet-type-pop-up", ".pet-item-pop-up", petCard);
-        // tagCreator("h4", "pet-breed-pop-up", ".pet-item-pop-up", petCard);
-        // tagCreator("h4", "pet-description-pop-up", ".pet-item-pop-up", petCard);
-        // tagCreator("h4", "pet-age-pop-up", ".pet-item-pop-up", petCard);
-        // tagCreator("h4", "pet-inoculations-pop-up", ".pet-item-pop-up", petCard);
-        // tagCreator("h4", "pet-diseases-pop-up", ".pet-item-pop-up", petCard);
-        // tagCreator("h4", "pet-parasites-pop-up", ".pet-item-pop-up", petCard);
-        // // filling the pop up window
-        // document.querySelectorAll(".pet-name-pop-up")[petCard].textContent = `Pet name: ${petCardsArray[petCard].name}`;
-        // document.querySelectorAll(".pet-type-pop-up")[petCard].textContent = `Type: ${petCardsArray[petCard].type}`;
-        // document.querySelectorAll(".pet-breed-pop-up")[petCard].textContent = `Breed: ${petCardsArray[petCard].breed}`;
-        // document.querySelectorAll(".pet-description-pop-up")[petCard].textContent = `Description: ${petCardsArray[petCard].description}`;
-        // document.querySelectorAll(".pet-age-pop-up")[petCard].textContent = `Age: ${petCardsArray[petCard].age}`;
-        // document.querySelectorAll(".pet-inoculations-pop-up")[petCard].textContent = `Inoculations: ${petCardsArray[petCard].inoculations}`;
-        // document.querySelectorAll(".pet-diseases-pop-up")[petCard].textContent = `Diseases: ${petCardsArray[petCard].diseases}`;
-        // document.querySelectorAll(".pet-parasites-pop-up")[petCard].textContent = `Parasites: ${petCardsArray[petCard].parasites}`;
+        tagCreator("div", "pet-item-pop-up-content", ".pet-item-pop-up", petCard);
+        tagCreator("div", "pet-item-text-content", ".pet-item-pop-up-content", petCard);
+        // creating the close button for the pop up
+        tagCreator("button", "button-close-pop-up", ".pet-item-text-content", petCard);
+        // creating the pop up window contents
+        tagCreator("h3", "pet-name-pop-up", ".pet-item-text-content", petCard);
+        tagCreator("img", "pet-pic-pop-up", ".pet-item-pop-up-content", petCard);
+        tagCreator("h4", "pet-type-pop-up", ".pet-item-text-content", petCard);
+        tagCreator("p", "pet-description-pop-up", ".pet-item-text-content", petCard);
+        tagCreator("ul", "pet-description-pop-up-list", ".pet-item-text-content", petCard);
+        tagCreator("li", "pet-age-pop-up", ".pet-description-pop-up-list", petCard);
+        tagCreator("li", "pet-inoculations-pop-up", ".pet-description-pop-up-list", petCard);
+        tagCreator("li", "pet-diseases-pop-up", ".pet-description-pop-up-list", petCard);
+        tagCreator("li", "pet-parasites-pop-up", ".pet-description-pop-up-list", petCard);
+        
+        // filling the pop up window
+        document.querySelectorAll(".pet-name-pop-up")[petCard].textContent = `${petCardsArray[petCard].name}`;
+        document.querySelectorAll(".pet-type-pop-up")[petCard].textContent = `${petCardsArray[petCard].type} - ${petCardsArray[petCard].breed}`;
+        document.querySelectorAll(".pet-pic-pop-up")[petCard].src = `${petCardsArray[petCard].img}`;
+        document.querySelectorAll(".pet-description-pop-up")[petCard].textContent = `${petCardsArray[petCard].description}`;
+        document.querySelectorAll(".pet-age-pop-up")[petCard].textContent = `Age: ${petCardsArray[petCard].age}`;
+        document.querySelectorAll(".pet-inoculations-pop-up")[petCard].textContent = `Inoculations: ${petCardsArray[petCard].inoculations}`;
+        document.querySelectorAll(".pet-diseases-pop-up")[petCard].textContent = `Diseases: ${petCardsArray[petCard].diseases}`;
+        document.querySelectorAll(".pet-parasites-pop-up")[petCard].textContent = `Parasites: ${petCardsArray[petCard].parasites}`;
     }
 
     tagCreator("button", "button-round-right", ".pets-characters");
 
+    // POP UP WINDOW BUTTON ACTIVATION
     const buttonInfoArray = document.querySelectorAll(".button-secondary-clickable");
 
     for (let [index, buttonElem] of buttonInfoArray.entries()) {
         buttonElem.addEventListener("click", () => {
             document.querySelectorAll(".pet-item-pop-up")[index].classList.add("active-pop-up");
-            dimClickOut.style.display = "block";
+            document.body.classList.add("stop-scrolling");
+            dimClickOut.style.display = "flex";
         })
     }
 
+    // POP UP WINDOW BUTTON DEACTIVATION
+    const buttonInfoCloseArray = document.querySelectorAll(".button-close-pop-up");
+    const clickerPopUp = document.querySelectorAll(".pop-up-overlay");
+
+    for (let [index, buttonElem] of buttonInfoCloseArray.entries()) {
+        buttonElem.addEventListener("click", () => {
+            document.querySelectorAll(".pet-item-pop-up")[index].classList.remove("active-pop-up");
+            dimClickOut.style.display = "none";
+            document.body.classList.remove("stop-scrolling");
+        })
+    }
+
+    dimClickOut.addEventListener ("click", () => {
+        document.querySelector(".pet-item-pop-up").classList.remove("active-pop-up");
+        dimClickOut.style.display = "none";
+        document.body.classList.remove("stop-scrolling");
+    })
+
+
     const sliderButtonLeft = document.querySelectorAll(".button-round-left");
     const sliderButtonRight = document.querySelectorAll(".button-round-right");
-    alert(Object.keys(sliderButtonLeft))
+    
 }
 
 renderPetShelter()
 
+
+// TAG CREATOR -  CONTENT FILLER
+ // const petCardKeys = Object.keys(petCardsArray[petCard]);
+    
+        // for (let key in petCardKeys) {
+        //     if (petCardKeys[key] !== "img" && petCardKeys[key] !== "name") {
+        //         tagCreator("p", `pet-${petCardKeys[key]}-pop-up`, ".pet-item-text-content", petCard);
+        //         document.querySelectorAll(`.pet-${petCardKeys[key]}-pop-up`)[petCard].textContent = `Pet ${petCardKeys[key]}: ${petCardsArray[petCard][petCardKeys[key]]}`;
+        //     }  else {
+        //         // tagCreator("img", `pet-item-pop-up-pic-${petCardsArray[petCard][petCardKeys[0]]}`, ".pet-item-pop-up-content", petCard);
+        //         // document.querySelectorAll(`.pet-item-pop-up-pic-${petCardsArray[petCard][petCardKeys[0]]}`)[petCard].src = petCardsArray[petCard].img;
+        //     }
+        // }

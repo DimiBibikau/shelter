@@ -473,52 +473,116 @@ pet-item-woody {
 /* pet item pop up window start  */
 .pet-item-pop-up {
     display: none;
+    position: absolute;
     flex-direction: column;
 
     padding: 10px;
 
-    border: solid 3px gold;
-    width: 350px;
-    height: 700px;
+    width: 900px;
+    height: 500px;
     
     background-color: white;
 
-    z-index: 100;
+    z-index: 101;
+}
+
+.pet-item-pop-up-content {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.pet-item-text-content {
+    display: flex;
+    flex-direction: column;
+    font: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 351px;
+    padding: 0 30px 0 20px;
+}
+
+.pet-pic-pop-up {
+    width: 500px;
+    height: 500px;
+}
+.pet-description-pop-up-list {
+    padding: 10px;
+    list-style:disc;
 }
 
 .active-pop-up {
     display: flex;
 }
 
+.passive-pop-up {
+    display: none;
+}
+
 .pet-name-pop-up {
-    font-size: 20px;
+    font-size: 35px;
 }
 
 .pet-type-pop-up {
     font-size: 20px; 
 }
-.pet-breed-pop-up {
-    font-size: 20px;
-}
 
 .pet-description-pop-up {
-    font-size: 20px;
+    font-size: 15px;
+    padding-bottom: 0;
+    line-height: 16.5px
 }
 
 .pet-age-pop-up {
-    font-size: 20px;
+    font-size: 15px;
+    padding-bottom: 10px;
 }
 
 .pet-inoculations-pop-up {
-    font-size: 20px;
+    font-size: 15px;
+    padding-bottom: 10px;
 }
 
 .pet-diseases-pop-up {
-    font-size: 20px;
+    font-size: 15px;
+    padding-bottom: 10px;
 }
 
 .pet-parasites-pop-up {
-    font-size: 20px;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.button-close-pop-up {
+    display: block;
+    align-self: flex-end;
+    height: 52px;
+    width: 52px;
+    left: 0px;
+    top: 192px;
+    border-radius: 100px;
+    padding: 23px, 19px, 23px, 19px;    
+    border: 2px solid #F1CDB3;
+    background-color: transparent;
+
+    background-image: url('../assets/icons/close-button.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.pop-up-overlay {
+    display: block;
+    position: fixed;
+	background-color: #545454;
+    opacity: 70%;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
 }
 /* pet item pop up window end */
 
@@ -639,14 +703,16 @@ pet-item-woody {
 }
 
 .dim-click-div {
-    position: absolute; 
     display: none;
+    position: fixed;
     top: 0; 
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:rgba(41,41,41,0.6);
-    z-index: 100;
+    background: url(../assets/images/noise_transparent.png);
+    background-repeat: repeat;
+    opacity: 70%;
+    z-index: 10;
 }
 
 /*tablet version*/
