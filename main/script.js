@@ -19,6 +19,8 @@ function burgerMenu () {
 
         menuIcon.style.display = "block";
         logo.style.display = "block";
+
+        document.body.classList.remove("stop-scrolling");
         
     } else {
         menu.classList.add("show-menu");
@@ -28,7 +30,9 @@ function burgerMenu () {
         menu.style.display = "flex";
         logo.style.display = "none";
         
-        dimClickOut.style.display = "block";       
+        dimClickOut.style.display = "block"; 
+
+        document.body.classList.add("stop-scrolling");      
     }
 }
 
@@ -100,6 +104,7 @@ const renderPetShelter = () => {
         document.querySelectorAll(".button-secondary-clickable")[petCard].textContent = "Learn more";
         
         // creating the pop up window
+        // tagCreator("div", "pop-up-overlay", ".pets-characters");
         tagCreator("div", "pet-item-pop-up", ".pets-characters");
         tagCreator("div", "pet-item-pop-up-content", ".pet-item-pop-up", petCard);
         tagCreator("div", "pet-item-text-content", ".pet-item-pop-up-content", petCard);
@@ -129,23 +134,35 @@ const renderPetShelter = () => {
 
     tagCreator("button", "button-round-right", ".pets-characters");
 
+    // POP UP WINDOW BUTTON ACTIVATION
     const buttonInfoArray = document.querySelectorAll(".button-secondary-clickable");
 
     for (let [index, buttonElem] of buttonInfoArray.entries()) {
         buttonElem.addEventListener("click", () => {
             document.querySelectorAll(".pet-item-pop-up")[index].classList.add("active-pop-up");
-            dimClickOut.style.display = "block";
+            document.body.classList.add("stop-scrolling");
+            dimClickOut.style.display = "flex";
         })
     }
 
+    // POP UP WINDOW BUTTON DEACTIVATION
     const buttonInfoCloseArray = document.querySelectorAll(".button-close-pop-up");
+    const clickerPopUp = document.querySelectorAll(".pop-up-overlay");
 
     for (let [index, buttonElem] of buttonInfoCloseArray.entries()) {
         buttonElem.addEventListener("click", () => {
             document.querySelectorAll(".pet-item-pop-up")[index].classList.remove("active-pop-up");
             dimClickOut.style.display = "none";
+            document.body.classList.remove("stop-scrolling");
         })
     }
+
+    dimClickOut.addEventListener ("click", () => {
+        document.querySelector(".pet-item-pop-up").classList.remove("active-pop-up");
+        dimClickOut.style.display = "none";
+        document.body.classList.remove("stop-scrolling");
+    })
+
 
     const sliderButtonLeft = document.querySelectorAll(".button-round-left");
     const sliderButtonRight = document.querySelectorAll(".button-round-right");
