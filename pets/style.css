@@ -66,7 +66,7 @@ ul, ol {
     line-height: 23px;
     letter-spacing: 0.06em;
     text-align: center;
-    color: #F1CDB3;
+    color: black !important;
     margin: 0;
     padding: 0;
     padding-bottom: 30px;
@@ -231,6 +231,7 @@ ul, ol {
 
 .button-number .h4 {
     padding-bottom: 15px;
+    color: black;
 }
 
 /*BUTTONS*/
@@ -332,8 +333,10 @@ nav .active-link a:hover {
 
     width: 900px;
     height: 500px;
+    border-radius: 15px;
     
     background-color: white;
+    color: black;
 
     z-index: 101;
 }

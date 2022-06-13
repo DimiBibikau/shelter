@@ -184,17 +184,6 @@ const renderPetShelter = () => {
    
     // CREATE THE 1ST BUTTON
     tagCreator("button", "button-round-left", ".pets-characters");
-  
-    // alert(Object.entries(originaList.slice(1, 3)))
-    
-    // const randomList = () => {
-    //     const cardsArray = [];
-    //     for (let i = 0; i < 4, i++;) {
-    //         cardsArray.push();
-    //     }
-    //     return alert(cardsArray);
-    // }
-    // randomList()
 
     // ITERATING OVER THE LIST OF PETS
     for (let petCard in petCardsArray) { 
@@ -242,7 +231,7 @@ const renderPetShelter = () => {
     tagCreator("button", "button-round-right", ".pets-characters");
 
     // POP UP WINDOW BUTTON ACTIVATION
-    const buttonInfoArray = document.querySelectorAll(".button-secondary-clickable");
+    const buttonInfoArray = document.querySelectorAll(".pet-item");
 
     for (let [index, buttonElem] of buttonInfoArray.entries()) {
         buttonElem.addEventListener("click", () => {
@@ -261,13 +250,13 @@ const renderPetShelter = () => {
             dimClickOut.style.display = "none";
             document.body.classList.remove("stop-scrolling");
         })
-
-        dimClickOut.addEventListener ("click", () => {
-            document.querySelector(".pet-item-pop-up")[index].classList.remove("active-pop-up");
-            dimClickOut.style.display = "none";
-            document.body.classList.remove("stop-scrolling");
-        })
     }
+
+    dimClickOut.addEventListener ("click", () => {
+        document.querySelector(".pet-item-pop-up")[index].classList.remove("active-pop-up");
+        dimClickOut.style.display = "none";
+        document.body.classList.remove("stop-scrolling");
+    })
 
     // SLIDER BUTTONS ACTIVATION
     const sliderButtonLeft = document.querySelectorAll(".button-round-left");
