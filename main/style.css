@@ -275,8 +275,6 @@ ul, ol {
 /*BUTTONS*/
 
 /*DOCUMENT*/
-
-
 .wrapper {
     margin: 0 auto;
     /*padding: 0 40px;*/
@@ -480,6 +478,8 @@ pet-item-woody {
 
     width: 900px;
     height: 500px;
+
+    border-radius: 15px;
     
     background-color: white;
 

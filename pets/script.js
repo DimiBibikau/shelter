@@ -191,7 +191,7 @@ const renderPetShelter = () => {
     // tagCreator("button", "button-round-right", ".pets-characters");
 
     // POP UP WINDOW BUTTON ACTIVATION
-    const buttonInfoArray = document.querySelectorAll(".button-secondary-clickable");
+    const buttonInfoArray = document.querySelectorAll(".pet-item");
 
     for (let [index, buttonElem] of buttonInfoArray.entries()) {
         buttonElem.addEventListener("click", () => {
